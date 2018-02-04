@@ -62,7 +62,7 @@ void setup()
     // To run the left motor Backwards for 3 seconds  
     digitalWrite(in1, LOW);
     digitalWrite(in2, HIGH);
-    delay(3000);
+    delay(5000);
 
     // now stop the left motor
     digitalWrite(in1, LOW);
@@ -70,15 +70,16 @@ void setup()
 
     // *** Right Motor ****
 
-    // To run the Right motor forward for 3 seconds  
-    digitalWrite(in3, LOW);
-    digitalWrite(in4, HIGH);
-    delay(3000);
-
-    // To run the Right motor Backwards for 3 seconds  
+    // To run the Right motor forward for 5 seconds  
     digitalWrite(in3, HIGH);
     digitalWrite(in4, LOW);
-    delay(3000);
+    delay(5000);
+
+    // To run the Right motor Backwards for 5 seconds
+    digitalWrite(in3, LOW);
+    digitalWrite(in4, HIGH);
+
+    delay(5000);
 
 
     // stop all motors
@@ -90,5 +91,5 @@ void setup()
 }
 
 void loop(){
-    // do nothing
+    // do nothing forever :(
 }
