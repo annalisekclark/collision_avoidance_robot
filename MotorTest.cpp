@@ -46,15 +46,29 @@ void setup()
     pinMode(in3, OUTPUT);
     pinMode(in4, OUTPUT);
 
-    // To run the left motor forward for 5 seconds  
+    // First set all pins low
+    digitalWrite(in1, LOW);
+    digitalWrite(in2, LOW);
+    digitalWrite(in3, LOW);
+    digitalWrite(in4, LOW);
+
+    // *** Left Motor ****
+
+    // To run the left motor forward for 3 seconds  
     digitalWrite(in1, HIGH);
     digitalWrite(in2, LOW);
-    delay(5000);
+    delay(3000);
 
-    // To run the left motor Backwards for 5 seconds  
+    // To run the left motor Backwards for 3 seconds  
     digitalWrite(in1, LOW);
     digitalWrite(in2, HIGH);
     delay(5000);
+
+    // now stop the left motor
+    digitalWrite(in1, LOW);
+    digitalWrite(in2, LOW);
+
+    // *** Right Motor ****
 
     // To run the Right motor forward for 5 seconds  
     digitalWrite(in3, LOW);
@@ -65,6 +79,7 @@ void setup()
     digitalWrite(in3, HIGH);
     digitalWrite(in4, LOW);
     delay(5000);
+
 
     // stop all motors
     digitalWrite(in1, LOW);
